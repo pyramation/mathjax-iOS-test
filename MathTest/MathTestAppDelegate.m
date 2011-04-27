@@ -16,6 +16,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    UIWebView * webview = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  
+    bool useServer = false;
+    
+    if (!useServer) {
+        NSString * setHtml = @"<!DOCTYPE html><html><head><title>MathJax</title><script type=\"text/javascript\" src=\"MathJax/MathJax.js\"></script><script type=\"text/x-mathjax-config\">MathJax.Hub.Config({tex2jax: {inlineMath: [[\"$\",\"$\"],[\"\\(\",\"\\)\"]]}});</script></head><body><h1>MathJax Test</h1><br><br><p>$$\\int_x^y f(x) dx$$</p><br><br><img src=\"images/test.jpg\"></body></html>"; 
+        [webview loadHTMLString:setHtml baseURL:[[NSBundle mainBundle] resourceURL]];
+        
+        NSString * path = [[NSBundle mainBundle] resourcePath]; 
+        path = [path stringByReplacingOccurrencesOfString:@"/" withString:@"//"];
+        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+        NSString * resourcesPath = [[NSString alloc] initWithFormat:@"file://%@/", path];
+        NSLog(@"%@", resourcesPath);
+        
+        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:resourcesPath]];
+    } else {
+        NSString * setHtml = @"<!DOCTYPE html><html><head><title>MathJax</title><script type=\"text/javascript\" src=\"mathjax/MathJax.js?config=TeX-AMS_HTML-full\"></script><script type=\"text/x-mathjax-config\">MathJax.Hub.Config({tex2jax: {inlineMath: [[\"$\",\"$\"],[\"\\(\",\"\\)\"]]}});</script></head><body><h1>MathJax Test</h1><br><br><p>$$\\int_x^y f(x) dx$$</p></body></html>"; 
+        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:@"http://www.mathapedia.com"]];
+    }
+
+    
+    
+    
+    [self.window addSubview:webview];
     [self.window makeKeyAndVisible];
     return YES;
 }

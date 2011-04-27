@@ -17,6 +17,8 @@
 		AA75D8E71368AF8600BA1AFD /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8E51368AF8600BA1AFD /* MainWindow_iPhone.xib */; };
 		AA75D8EB1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75D8EA1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m */; };
 		AA75D8EE1368AF8600BA1AFD /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8EC1368AF8600BA1AFD /* MainWindow_iPad.xib */; };
+		AA75D8F51368AFC400BA1AFD /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8F41368AFC400BA1AFD /* MathJax */; };
+		AA75D8FF1368B40B00BA1AFD /* images in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8FE1368B40B00BA1AFD /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +26,20 @@
 		AA75D8CF1368AF8500BA1AFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AA75D8D11368AF8500BA1AFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA75D8D31368AF8500BA1AFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AA75D8D71368AF8500BA1AFD /* MathTest-Info.plist */ = {isa = PBXFileReference; path = "MathTest-Info.plist"; sourceTree = "<group>"; };
+		AA75D8D71368AF8500BA1AFD /* MathTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathTest-Info.plist"; sourceTree = "<group>"; };
 		AA75D8D91368AF8500BA1AFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AA75D8DB1368AF8500BA1AFD /* MathTest-Prefix.pch */ = {isa = PBXFileReference; path = "MathTest-Prefix.pch"; sourceTree = "<group>"; };
+		AA75D8DB1368AF8500BA1AFD /* MathTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathTest-Prefix.pch"; sourceTree = "<group>"; };
 		AA75D8DC1368AF8500BA1AFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AA75D8DE1368AF8500BA1AFD /* MathTestAppDelegate.h */ = {isa = PBXFileReference; path = MathTestAppDelegate.h; sourceTree = "<group>"; };
+		AA75D8DE1368AF8500BA1AFD /* MathTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathTestAppDelegate.h; sourceTree = "<group>"; };
 		AA75D8DF1368AF8500BA1AFD /* MathTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathTestAppDelegate.m; sourceTree = "<group>"; };
-		AA75D8E21368AF8600BA1AFD /* MathTestAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = MathTestAppDelegate_iPhone.h; path = iPhone/MathTestAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		AA75D8E21368AF8600BA1AFD /* MathTestAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathTestAppDelegate_iPhone.h; path = iPhone/MathTestAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		AA75D8E31368AF8600BA1AFD /* MathTestAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MathTestAppDelegate_iPhone.m; path = iPhone/MathTestAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		AA75D8E61368AF8600BA1AFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		AA75D8E91368AF8600BA1AFD /* MathTestAppDelegate_iPad.h */ = {isa = PBXFileReference; name = MathTestAppDelegate_iPad.h; path = iPad/MathTestAppDelegate_iPad.h; sourceTree = "<group>"; };
+		AA75D8E91368AF8600BA1AFD /* MathTestAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathTestAppDelegate_iPad.h; path = iPad/MathTestAppDelegate_iPad.h; sourceTree = "<group>"; };
 		AA75D8EA1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MathTestAppDelegate_iPad.m; path = iPad/MathTestAppDelegate_iPad.m; sourceTree = "<group>"; };
 		AA75D8ED1368AF8600BA1AFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		AA75D8F41368AFC400BA1AFD /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = "<group>"; };
+		AA75D8FE1368B40B00BA1AFD /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		AA75D8C01368AF8500BA1AFD = {
 			isa = PBXGroup;
 			children = (
+				AA75D9001368B41500BA1AFD /* Resources */,
 				AA75D8D51368AF8500BA1AFD /* MathTest */,
 				AA75D8CE1368AF8500BA1AFD /* Frameworks */,
 				AA75D8CC1368AF8500BA1AFD /* Products */,
@@ -122,6 +127,15 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		AA75D9001368B41500BA1AFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA75D8F41368AFC400BA1AFD /* MathJax */,
+				AA75D8FE1368B40B00BA1AFD /* images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +189,8 @@
 				AA75D8DA1368AF8500BA1AFD /* InfoPlist.strings in Resources */,
 				AA75D8E71368AF8600BA1AFD /* MainWindow_iPhone.xib in Resources */,
 				AA75D8EE1368AF8600BA1AFD /* MainWindow_iPad.xib in Resources */,
+				AA75D8F51368AFC400BA1AFD /* MathJax in Resources */,
+				AA75D8FF1368B40B00BA1AFD /* images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
