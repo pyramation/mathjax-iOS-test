@@ -23,16 +23,21 @@
         NSString * setHtml = @"<!DOCTYPE html><html><head><title>MathJax</title><script type=\"text/javascript\" src=\"MathJax/MathJax.js\"></script><script type=\"text/x-mathjax-config\">MathJax.Hub.Config({tex2jax: {inlineMath: [[\"$\",\"$\"],[\"\\(\",\"\\)\"]]}});</script></head><body><br><br><h1>MathJax Test</h1><br><p>Here the HTML is dynamically inserted using loadHTMLString in a UIWebView, and the JavaScript and image are referenced from the resources of the application.</p><br><p>$$\\int_x^y f(x) dx$$</p><br><br><img src=\"images/test.jpg\"></body></html>"; 
         
 //        [webview loadHTMLString:setHtml baseURL:[[NSBundle mainBundle] resourceURL]];
-        
-        NSString * path = [[NSBundle mainBundle] resourcePath]; 
-        path = [path stringByReplacingOccurrencesOfString:@"/" withString:@"//"];
-        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
-        NSString * resourcesPath = [[NSString alloc] initWithFormat:@"file://%@/", path];
-        NSLog(@"%@", resourcesPath);
-        
-        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:resourcesPath]];
 
+//        NSString * path = [[NSBundle mainBundle] resourcePath]; 
+//        path = [path stringByReplacingOccurrencesOfString:@"/" withString:@"//"];
+//        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        
+//        NSString * resourcesPath = [[NSString alloc] initWithFormat:@"file://%@/", path];
+//        NSLog(@"%@", resourcesPath);
+//        
+//        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:resourcesPath]];
+
+        [webview loadHTMLString:setHtml 
+                        baseURL:[NSURL fileURLWithPath:
+                                 [[NSBundle mainBundle] bundlePath]]];
+        
+        
         [self setView: webview];
         [webview release];
         
