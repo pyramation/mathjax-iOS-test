@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MathTestAppDelegate : NSObject <UIApplicationDelegate> {
+@interface MathTestAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 
 }
 

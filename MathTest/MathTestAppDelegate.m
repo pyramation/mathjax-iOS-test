@@ -7,41 +7,41 @@
 //
 
 #import "MathTestAppDelegate.h"
+#import "RemoteJavaScriptLocalHTMLViewController.h"
+#import "LocalWebViewController.h"
+#import "DynamicHTMLWebViewController.h"
+
+#define addMe(view, nav, title, icon, class) class * view = [[class alloc] init]; \
+UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:view]; \
+nav.navigationBar.barStyle = UIBarStyleBlackTranslucent; \
+[view.tabBarItem initWithTitle:title image:[UIImage imageNamed:icon] tag:0];\
+[controllers addObject:nav]; \
+[view release]
+
 
 @implementation MathTestAppDelegate
-
-
 @synthesize window=_window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-    UIWebView * webview = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  
-    bool useServer = false;
     
-    if (!useServer) {
-        NSString * setHtml = @"<!DOCTYPE html><html><head><title>MathJax</title><script type=\"text/javascript\" src=\"MathJax/MathJax.js\"></script><script type=\"text/x-mathjax-config\">MathJax.Hub.Config({tex2jax: {inlineMath: [[\"$\",\"$\"],[\"\\(\",\"\\)\"]]}});</script></head><body><h1>MathJax Test</h1><br><br><p>$$\\int_x^y f(x) dx$$</p><br><br><img src=\"images/test.jpg\"></body></html>"; 
-        [webview loadHTMLString:setHtml baseURL:[[NSBundle mainBundle] resourceURL]];
-        
-        NSString * path = [[NSBundle mainBundle] resourcePath]; 
-        path = [path stringByReplacingOccurrencesOfString:@"/" withString:@"//"];
-        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableArray * controllers = [[NSMutableArray alloc] init];
+    addMe(webViewC1, webNav1, @"Remote Web View", @"circle.png", RemoteJavaScriptLocalHTMLViewController);
+    addMe(webViewC2, webNav2, @"Local Web View", @"circle.png", LocalWebViewController);
+    addMe(webViewC3, webNav3, @"Dynamic Web View", @"circle.png", DynamicHTMLWebViewController);
 
-        NSString * resourcesPath = [[NSString alloc] initWithFormat:@"file://%@/", path];
-        NSLog(@"%@", resourcesPath);
-        
-        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:resourcesPath]];
-    } else {
-        NSString * setHtml = @"<!DOCTYPE html><html><head><title>MathJax</title><script type=\"text/javascript\" src=\"mathjax/MathJax.js?config=TeX-AMS_HTML-full\"></script><script type=\"text/x-mathjax-config\">MathJax.Hub.Config({tex2jax: {inlineMath: [[\"$\",\"$\"],[\"\\(\",\"\\)\"]]}});</script></head><body><h1>MathJax Test</h1><br><br><p>$$\\int_x^y f(x) dx$$</p></body></html>"; 
-        [webview loadHTMLString:setHtml baseURL:[NSURL URLWithString:@"http://www.mathapedia.com"]];
-    }
-
+    UITabBarController * tbarController = [[UITabBarController alloc] init];
+    tbarController.viewControllers = controllers;
+    tbarController.customizableViewControllers = controllers;
+    tbarController.delegate = self;
+    
+//    self.navigationController = [[UINavigationController alloc] initWithRootViewController:tbarController];
+   
+    [self.window addSubview: tbarController.view];
     
     
-    
-    [self.window addSubview:webview];
     [self.window makeKeyAndVisible];
     return YES;
 }
