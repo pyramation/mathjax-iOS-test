@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6C27F9136A31270016CF80 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = AA6C27F8136A31270016CF80 /* MathJax */; };
+		AA6C27FB136A31820016CF80 /* MathJaxUnpacked in Resources */ = {isa = PBXBuildFile; fileRef = AA6C27FA136A31820016CF80 /* MathJaxUnpacked */; };
 		AA75D8D01368AF8500BA1AFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA75D8CF1368AF8500BA1AFD /* UIKit.framework */; };
 		AA75D8D21368AF8500BA1AFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA75D8D11368AF8500BA1AFD /* Foundation.framework */; };
 		AA75D8D41368AF8500BA1AFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA75D8D31368AF8500BA1AFD /* CoreGraphics.framework */; };
@@ -17,7 +19,6 @@
 		AA75D8E71368AF8600BA1AFD /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8E51368AF8600BA1AFD /* MainWindow_iPhone.xib */; };
 		AA75D8EB1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75D8EA1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m */; };
 		AA75D8EE1368AF8600BA1AFD /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8EC1368AF8600BA1AFD /* MainWindow_iPad.xib */; };
-		AA75D8F51368AFC400BA1AFD /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8F41368AFC400BA1AFD /* MathJax */; };
 		AA75D8FF1368B40B00BA1AFD /* images in Resources */ = {isa = PBXBuildFile; fileRef = AA75D8FE1368B40B00BA1AFD /* images */; };
 		AA75D9151368B65C00BA1AFD /* LocalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75D9141368B65C00BA1AFD /* LocalWebViewController.m */; };
 		AA75D9181368B67C00BA1AFD /* RemoteJavaScriptLocalHTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75D9171368B67C00BA1AFD /* RemoteJavaScriptLocalHTMLViewController.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA6C27F8136A31270016CF80 /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = "<group>"; };
+		AA6C27FA136A31820016CF80 /* MathJaxUnpacked */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJaxUnpacked; sourceTree = "<group>"; };
 		AA75D8CB1368AF8500BA1AFD /* MathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA75D8CF1368AF8500BA1AFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AA75D8D11368AF8500BA1AFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,7 +45,6 @@
 		AA75D8E91368AF8600BA1AFD /* MathTestAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathTestAppDelegate_iPad.h; path = iPad/MathTestAppDelegate_iPad.h; sourceTree = "<group>"; };
 		AA75D8EA1368AF8600BA1AFD /* MathTestAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MathTestAppDelegate_iPad.m; path = iPad/MathTestAppDelegate_iPad.m; sourceTree = "<group>"; };
 		AA75D8ED1368AF8600BA1AFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
-		AA75D8F41368AFC400BA1AFD /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = "<group>"; };
 		AA75D8FE1368B40B00BA1AFD /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		AA75D9131368B65C00BA1AFD /* LocalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalWebViewController.h; sourceTree = "<group>"; };
 		AA75D9141368B65C00BA1AFD /* LocalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalWebViewController.m; sourceTree = "<group>"; };
@@ -142,8 +144,9 @@
 		AA75D9001368B41500BA1AFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA6C27FA136A31820016CF80 /* MathJaxUnpacked */,
+				AA6C27F8136A31270016CF80 /* MathJax */,
 				AA75D91C1368BB7F00BA1AFD /* circle.png */,
-				AA75D8F41368AFC400BA1AFD /* MathJax */,
 				AA75D8FE1368B40B00BA1AFD /* images */,
 			);
 			name = Resources;
@@ -215,9 +218,10 @@
 				AA75D8DA1368AF8500BA1AFD /* InfoPlist.strings in Resources */,
 				AA75D8E71368AF8600BA1AFD /* MainWindow_iPhone.xib in Resources */,
 				AA75D8EE1368AF8600BA1AFD /* MainWindow_iPad.xib in Resources */,
-				AA75D8F51368AFC400BA1AFD /* MathJax in Resources */,
 				AA75D8FF1368B40B00BA1AFD /* images in Resources */,
 				AA75D91D1368BB7F00BA1AFD /* circle.png in Resources */,
+				AA6C27F9136A31270016CF80 /* MathJax in Resources */,
+				AA6C27FB136A31820016CF80 /* MathJaxUnpacked in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
